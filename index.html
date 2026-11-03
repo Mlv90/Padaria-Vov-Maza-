@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vovó Maza, padaria artesanal: pães, bolos, doces e salgados feitos com carinho."
+    />
+    <title>Vovó Maza - Padaria Artesanal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Ícones reutilizados via <use> -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+        />
+      </symbol>
+      <symbol id="i-target" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+        />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <path
+          d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2.7c-2.3 0-4.1 1.8-4.1 4.1v7.6c0 2.3 1.8 4.1 4.1 4.1h7.6c2.3 0 4.1-1.8 4.1-4.1V8.8c0-2.3-1.8-4.1-4.1-4.1H7.6zM12 7.7c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3-1.9-4.3-4.3-4.3zm0 7.2c-1.6 0-2.9-1.3-2.9-2.9s1.3-2.9 2.9-2.9 2.9 1.3 2.9 2.9-1.3 2.9-2.9 2.9zm5.9-9.1c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5.7 1.5 1.5 1.5 1.5-.7 1.5-1.5z"
+        />
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.477 2 2 6.477 2 12c0 5.144 3.733 9.426 8.618 10.313V15.71H8.077V12h2.541V9.327c0-2.527 1.543-3.906 3.791-3.906 1.09 0 2.039.193 2.316.277V8.5h-1.423c-1.248 0-1.487.593-1.487 1.464V12h2.894l-.47 3.71h-2.424v6.603C18.267 21.426 22 17.144 22 12 22 6.477 17.523 2 12 2z"
+        />
+      </symbol>
+    </svg>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- HEADER -->
+    <header
+      class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex justify-between items-center">
+          <a
+            href="#home"
+            class="text-2xl font-bold text-primary flex items-center gap-2"
+          >
+            <svg
+              class="w-8 h-8 text-secondary"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+            Vovó <span class="text-secondary">Maza</span>
+          </a>
+
+          <nav class="hidden md:block" aria-label="Principal">
+            <ul class="flex space-x-8 text-lg font-medium">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#sobre" class="nav-link">Sobre</a></li>
+              <li><a href="#produtos" class="nav-link">Produtos</a></li>
+              <li><a href="#testemunhos" class="nav-link">Avaliações</a></li>
+              <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+          </nav>
+
+          <div class="flex items-center space-x-4">
+            <button
+              id="searchBtn"
+              class="hidden md:block text-primary hover:text-secondary transition duration-300 p-2 rounded-full hover:bg-gray-100"
+              aria-label="Pesquisar produtos"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <use href="#i-search" />
+              </svg>
+            </button>
+            <button
+              id="mobileMenuBtn"
+              class="md:hidden text-primary hover:text-secondary p-2 rounded-lg"
+              aria-label="Abrir menu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <use href="#i-menu" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <div
+      id="mobileMenu"
+      class="mobile-menu fixed top-0 right-0 w-full h-full bg-primary z-50 md:hidden"
+      aria-hidden="true"
+    >
+      <div class="p-6">
+        <button
+          id="closeMenu"
+          class="text-white p-2 mb-8"
+          aria-label="Fechar menu"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <use href="#i-close" />
+          </svg>
+        </button>
+        <nav aria-label="Menu mobile">
+          <ul class="space-y-6">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+            <li><a href="#produtos" class="mobile-link">Produtos</a></li>
+            <li><a href="#testemunhos" class="mobile-link">Avaliações</a></li>
+            <li><a href="#contato" class="mobile-link">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HOME -->
+    <section
+      id="home"
+      class="hero-gradient relative min-h-screen flex items-center"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="text-white fade-in-up">
+            <p class="text-xl sm:text-2xl font-light text-secondary mb-4">
+              🥖 Bem-vindo à
+            </p>
+            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-6">
+              Vovó Maza
+            </h1>
+            <p class="text-xl sm:text-2xl mb-4 opacity-90">
+              Sabor de casa, carinho de vó
+            </p>
+            <p class="text-lg mb-8 opacity-80 max-w-lg">
+              Feita com amor, como só a Vovó Maza sabe fazer. Produtos
+              artesanais fresquinhos todos os dias.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#produtos"
+                class="btn-primary btn-lg text-white rounded-full"
+                >Ver Cardápio</a
+              >
+              <a
+                href="#contato"
+                class="btn-outline btn-lg text-white rounded-full"
+                >Fazer Pedido</a
+              >
+            </div>
+          </div>
+
+          <div class="relative slide-in-right hidden lg:block">
+            <div class="float-animation">
+              <div
+                class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+              >
+                <img
+                  src="https://placehold.co/600x600/4A2C2A/F5E6CC?text=Pães+Artesanais"
+                  alt="Produtos da Padaria"
+                  class="rounded-2xl shadow-2xl w-full"
+                />
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-10 -left-10 bg-secondary text-white p-6 rounded-2xl shadow-xl"
+            >
+              <p class="text-4xl font-bold">15+</p>
+              <p class="text-sm">Anos de tradição</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+          <div class="text-center glass-card p-8 rounded-2xl">
+            <div class="stat-number" data-target="500">0</div>
+            <p class="text-gray-600 font-medium mt-2">Clientes Felizes</p>
+          </div>
+          <div class="text-center glass-card p-8 rounded-2xl">
+            <div class="stat-number" data-target="50">0</div>
+            <p class="text-gray-600 font-medium mt-2">Produtos Diários</p>
+          </div>
+          <div class="text-center glass-card p-8 rounded-2xl">
+            <div class="stat-number" data-target="15">0</div>
+            <p class="text-gray-600 font-medium mt-2">Anos de Tradição</p>
+          </div>
+          <div class="text-center glass-card p-8 rounded-2xl">
+            <div class="stat-number" data-target="100">0</div>
+            <p class="text-gray-600 font-medium mt-2">Receitas Especiais</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          <div class="reveal">
+            <div class="relative">
+              <img
+                src="https://placehold.co/600x500/4A2C2A/F5E6CC?text=Nossa+Historia"
+                alt="Nossa História"
+                class="rounded-3xl shadow-2xl w-full"
+              />
+              <div
+                class="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-2xl shadow-xl max-w-xs"
+              >
+                <p class="text-lg font-semibold mb-2">💛 Feito com amor</p>
+                <p class="text-sm opacity-90">
+                  Cada produto é preparado com carinho e dedicação
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <p class="text-secondary font-semibold text-lg mb-2">
+              Nossa História
+            </p>
+            <h2 class="text-4xl sm:text-5xl font-bold text-primary mb-6">
+              Tradição e Sabor há 15 Anos
+            </h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              Na Vovó Maza, cada encomenda é preparada com carinho, ingredientes
+              frescos e o sabor inconfundível das receitas de vó. Nossa missão é
+              espalhar carinho em forma de sabor, oferecendo produtos frescos e
+              feitos com amor.
+            </p>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+              Sonhamos em ser referência em qualidade e acolhimento, mantendo
+              viva a tradição das receitas de vó. Valorizamos o afeto, a
+              honestidade e o cuidado em cada detalhe, do forno ao seu coração.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="icon-box">
+                  <svg
+                    class="w-6 h-6 text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#i-check" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">
+                    Ingredientes Frescos
+                  </h4>
+                  <p class="text-sm text-gray-600">Qualidade garantida</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="icon-box">
+                  <svg
+                    class="w-6 h-6 text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#i-clock" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">Feito no Dia</h4>
+                  <p class="text-sm text-gray-600">Sempre fresquinho</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="icon-box">
+                  <svg
+                    class="w-6 h-6 text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#i-book" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">
+                    Receitas Tradicionais
+                  </h4>
+                  <p class="text-sm text-gray-600">Segredo de família</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="icon-box">
+                  <svg
+                    class="w-6 h-6 text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <use href="#i-heart" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">
+                    Atendimento Especial
+                  </h4>
+                  <p class="text-sm text-gray-600">Como em família</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#contato"
+              class="btn-primary btn-lg text-white rounded-full"
+              >Fazer Encomenda</a
+            >
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+          <div class="text-center glass-card p-10 rounded-2xl">
+            <div class="value-icon">
+              <svg
+                class="w-10 h-10 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <use href="#i-target" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">Missão</h3>
+            <p class="text-gray-600">
+              Espalhar carinho em forma de sabor, oferecendo produtos frescos e
+              feitos com amor.
+            </p>
+          </div>
+          <div class="text-center glass-card p-10 rounded-2xl">
+            <div class="value-icon">
+              <svg
+                class="w-10 h-10 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <use href="#i-eye" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">Visão</h3>
+            <p class="text-gray-600">
+              Ser referência em qualidade e acolhimento, mantendo viva a
+              tradição das receitas de vó.
+            </p>
+          </div>
+          <div class="text-center glass-card p-10 rounded-2xl">
+            <div class="value-icon">
+              <svg
+                class="w-10 h-10 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <use href="#i-heart" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">Valores</h3>
+            <p class="text-gray-600">
+              Afeto, honestidade e cuidado em cada detalhe — do forno ao seu
+              coração.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="text-secondary font-semibold text-lg mb-2">
+            Nosso Cardápio
+          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold text-primary mb-4">
+            Produtos Artesanais
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Feitos diariamente com ingredientes selecionados e muito amor
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-6 mb-12 reveal">
+          <div
+            class="flex flex-wrap justify-center gap-4"
+            role="group"
+            aria-label="Filtrar por categoria"
+          >
+            <button
+              class="product-category active"
+              data-category="todos"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+            <button
+              class="product-category"
+              data-category="paes"
+              aria-pressed="false"
+            >
+              Pães
+            </button>
+            <button
+              class="product-category"
+              data-category="bolos"
+              aria-pressed="false"
+            >
+              Bolos
+            </button>
+            <button
+              class="product-category"
+              data-category="doces"
+              aria-pressed="false"
+            >
+              Doces
+            </button>
+            <button
+              class="product-category"
+              data-category="salgados"
+              aria-pressed="false"
+            >
+              Salgados
+            </button>
+          </div>
+          <input
+            type="search"
+            id="productSearch"
+            class="search-input"
+            placeholder="Buscar produto..."
+            aria-label="Buscar produto"
+          />
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="productsGrid"
+        >
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="paes"
+            data-name="Pão Francês"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Pão+Frances"
+                alt="Pão Francês"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 0,80</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">Pão Francês</h3>
+              <p class="text-gray-600 mb-4">
+                Crocante por fora, macio por dentro. O clássico de todas as
+                manhãs.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+                <button class="order-btn" data-product="Pão Francês">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="paes"
+            data-name="Pão Integral"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Pão+Integral"
+                alt="Pão Integral"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 12,00</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">Pão Integral</h3>
+              <p class="text-gray-600 mb-4">
+                Saudável e saboroso, rico em fibras. Perfeito para uma vida
+                equilibrada.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 4 de 5">★★★★☆</div>
+                <button class="order-btn" data-product="Pão Integral">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="paes"
+            data-name="Baguete Artesanal"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Baguete"
+                alt="Baguete Artesanal"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 6,50</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Baguete Artesanal
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Massa de fermentação lenta para um miolo airado e casca dourada
+                e crocante.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 4 de 5">★★★★☆</div>
+                <button class="order-btn" data-product="Baguete Artesanal">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="bolos"
+            data-name="Bolo de Cenoura"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Bolo+Cenoura"
+                alt="Bolo de Cenoura"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 35,00</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Bolo de Cenoura
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Com uma generosa cobertura de chocolate. O favorito das tardes
+                em família.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+                <button class="order-btn" data-product="Bolo de Cenoura">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="doces"
+            data-name="Torta de Maçã"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Torta+Maçã"
+                alt="Torta de Maçã"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 28,00</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Torta de Maçã
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Recheio suculento de maçãs e canela, com a massa amanteigada da
+                Vovó.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 4 de 5">★★★★☆</div>
+                <button class="order-btn" data-product="Torta de Maçã">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="glass-card product-item reveal group rounded-2xl overflow-hidden"
+            data-category="salgados"
+            data-name="Empada de Frango"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/400x300/4A2C2A/F5E6CC?text=Empada+Frango"
+                alt="Empada de Frango"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span class="price-tag">R$ 8,00</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Empada de Frango
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Massa que derrete na boca e um recheio cremoso e bem temperado.
+              </p>
+              <div class="card-footer">
+                <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+                <button class="order-btn" data-product="Empada de Frango">
+                  Encomendar →
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p id="noResults" class="text-center text-gray-500 mt-12" hidden>
+          Nenhum produto encontrado para essa busca.
+        </p>
+
+        <div class="text-center mt-16 reveal">
+          <a href="#contato" class="btn-primary btn-lg text-white rounded-full"
+            >Fazer Meu Pedido Agora</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section id="testemunhos" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <p class="text-secondary font-semibold text-lg mb-2">O que dizem</p>
+          <h2 class="text-4xl sm:text-5xl font-bold text-primary mb-4">
+            Carinho dos Nossos Clientes
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Avaliações de quem já experimentou o sabor e o carinho da Vovó Maza.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <figure class="glass-card p-8 rounded-2xl reveal">
+            <div class="stars mb-4" aria-label="Avaliação 5 de 5">★★★★★</div>
+            <blockquote class="italic text-gray-700 mb-6 leading-relaxed">
+              "Os pães têm um sabor que me transporta para a infância! A baguete
+              é crocante e o bolo de cenoura é simplesmente o melhor que já
+              comi."
+            </blockquote>
+            <figcaption class="flex items-center gap-4">
+              <img
+                src="https://placehold.co/60x60/D4A86A/4A2C2A?text=J.S."
+                alt=""
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-bold text-primary">João Silva</p>
+                <p class="text-sm text-gray-500">Cliente Fiel</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="glass-card p-8 rounded-2xl reveal">
+            <div class="stars mb-4" aria-label="Avaliação 5 de 5">★★★★★</div>
+            <blockquote class="italic text-gray-700 mb-6 leading-relaxed">
+              "Atendimento super atencioso e produtos sempre fresquinhos.
+              Sente-se o amor em cada mordida. Recomendo o pão integral!"
+            </blockquote>
+            <figcaption class="flex items-center gap-4">
+              <img
+                src="https://placehold.co/60x60/4A2C2A/F5E6CC?text=M.A."
+                alt=""
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-bold text-primary">Maria Alves</p>
+                <p class="text-sm text-gray-500">Mãe de Família</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="glass-card p-8 rounded-2xl reveal">
+            <div class="stars mb-4" aria-label="Avaliação 4 de 5">★★★★☆</div>
+            <blockquote class="italic text-gray-700 mb-6 leading-relaxed">
+              "Excelente! A torta de maçã é de dar água na boca, e a qualidade
+              dos ingredientes é notável. O preço vale o sabor artesanal."
+            </blockquote>
+            <figcaption class="flex items-center gap-4">
+              <img
+                src="https://placehold.co/60x60/F5E6CC/4A2C2A?text=R.C."
+                alt=""
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-bold text-primary">Rafael Costa</p>
+                <p class="text-sm text-gray-500">Avaliador Gourmet</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <p class="text-secondary font-semibold text-lg mb-2">Fale Conosco</p>
+          <h2 class="text-4xl sm:text-5xl font-bold text-primary mb-4">
+            Entre em Contato
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Faça sua encomenda ou tire suas dúvidas. Estamos prontos para te
+            atender com carinho.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="glass-card p-8 sm:p-12 rounded-2xl reveal">
+            <form id="contactForm" class="space-y-6" novalidate>
+              <div>
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-input"
+                  placeholder="Seu nome"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="mensagem" class="form-label"
+                  >Sua Mensagem / Encomenda</label
+                >
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  class="form-input"
+                  placeholder="Gostaria de encomendar 1 Bolo de Cenoura..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary w-full px-6 py-3 text-lg font-semibold text-white rounded-lg"
+              >
+                Enviar Mensagem
+              </button>
+              <p
+                id="formFeedback"
+                class="text-center font-medium text-primary"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+
+          <div class="space-y-8 reveal">
+            <div class="space-y-4">
+              <h3 class="text-3xl font-bold text-primary">
+                Informações da Padaria
+              </h3>
+
+              <div class="flex items-start gap-4">
+                <svg
+                  class="w-6 h-6 text-secondary flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#i-phone" />
+                </svg>
+                <div>
+                  <p class="font-bold text-lg text-primary">Telefone</p>
+                  <p class="text-gray-600">(11) 99999-0000</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <svg
+                  class="w-6 h-6 text-secondary flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#i-mail" />
+                </svg>
+                <div>
+                  <p class="font-bold text-lg text-primary">E-mail</p>
+                  <p class="text-gray-600">contato@vovomaza.com.br</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <svg
+                  class="w-6 h-6 text-secondary flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#i-pin" />
+                </svg>
+                <div>
+                  <p class="font-bold text-lg text-primary">Endereço</p>
+                  <p class="text-gray-600">
+                    Rua da Tradição, 123 - Bairro Aconchego, SP
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full h-80 rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="https://placehold.co/700x500/D4A86A/4A2C2A?text=Mapa+Localização"
+                alt="Localização da padaria no mapa"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-white/20 pb-8 mb-8"
+        >
+          <div>
+            <a href="#home" class="text-2xl font-bold text-white block mb-4">
+              Vovó <span class="text-secondary">Maza</span>
+            </a>
+            <p class="text-sm opacity-80">
+              Padaria artesanal com sabor de casa e carinho de vó. A tradição
+              que alimenta a alma.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Navegação</h4>
+            <ul class="space-y-2 text-sm opacity-80">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#sobre" class="footer-link">Sobre Nós</a></li>
+              <li><a href="#produtos" class="footer-link">Cardápio</a></li>
+              <li><a href="#testemunhos" class="footer-link">Avaliações</a></li>
+              <li><a href="#contato" class="footer-link">Fale Conosco</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">
+              Mais Vendidos
+            </h4>
+            <ul class="space-y-2 text-sm opacity-80">
+              <li>Pão Francês Artesanal</li>
+              <li>Bolo de Cenoura com Chocolate</li>
+              <li>Torta de Maçã</li>
+              <li>Pão Integral com Grãos</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-secondary">Siga-nos</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg class="w-6 h-6" fill="currentColor" aria-hidden="true">
+                  <use href="#i-instagram" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg class="w-6 h-6" fill="currentColor" aria-hidden="true">
+                  <use href="#i-facebook" />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/5511999990000"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.038 2.007c-5.46 0-9.882 4.422-9.882 9.882 0 1.76.467 3.42 1.353 4.868l-1.4 5.122 5.253-1.378c1.42.793 3.03 1.258 4.676 1.258 5.46 0 9.882-4.422 9.882-9.882 0-5.46-4.422-9.882-9.882-9.882zm4.184 13.92c-.17-.086-.96-.475-1.107-.528-.146-.054-.254-.08-.363.08-.11.16-.423.528-.518.636-.096.11-.192.11-.357.03-.836-.407-1.748-.832-2.52-1.55-.658-.616-1.125-1.373-1.25-1.58-.127-.206-.014-.32-.116-.518-.096-.192-.836-1.92-.836-2.227 0-.306-.21-.528-.293-.72-.083-.192-.682-1.636-.933-2.235-.246-.59-.49-1.025-.97-1.05-.48-.025-.98.24-1.294.57-.312.33-.89.873-.974 1.706-.084.832-.382 1.69-.382 1.768 0 .075.27.35.614 1.05.343.7.674 1.29.674 1.398 0 .11-.167.35-.333.535-.167.184-.316.35-.595.68-.278.33-.58.64-.84.866-.26.225-.56.452-.284.856.275.4.928 1.488 1.252 1.944.324.456.637.66.97.77.333.11 2.503.95 4.383 1.737 1.88.788 3.324.77 3.657.77.332 0 1.09-.13 1.256-.258.164-.13.56-.48.64-.78.082-.302.082-.56.05-.72-.033-.16-.123-.192-.25-.268z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-8 border-t border-white/10">
+          <p class="text-sm opacity-60">
+            &copy; 2025 Vovó Maza - Padaria Artesanal. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
